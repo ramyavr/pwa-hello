@@ -14,7 +14,7 @@ export class AppHome extends LitElement {
 
   // For more information on using properties and state in lit
   // check out this link https://lit.dev/docs/components/properties/
-  @property() message = 'Welcome!';
+  @property() message = 'Welcome Joe Bloggs!';
 
   static get styles() {
     return [
@@ -72,15 +72,15 @@ export class AppHome extends LitElement {
   async firstUpdated() {
     // this method is a lifecycle even in lit
     // for more info check out the lit docs https://lit.dev/docs/components/lifecycle/
-    console.log('This is your home page');
+    console.log('Pixelcode PWA home page');
   }
 
   share() {
     if ((navigator as any).share) {
       (navigator as any).share({
-        title: 'PWABuilder pwa-starter',
-        text: 'Check out the PWABuilder pwa-starter!',
-        url: 'https://github.com/pwa-builder/pwa-starter',
+        title: 'Pixelcode PWA Demo',
+        text: 'Check out the Pixelcode PWA Demo App!',
+        url: 'https://github.com/ramyavr/pwa-hello',
       });
     }
   }
@@ -97,18 +97,16 @@ export class AppHome extends LitElement {
             </div>
 
             <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <a href="https://github.com/pwa-builder/pwa-starter/wiki/Getting-Started">
-                Documentation on Github</a>.
+              For more information on the Pixelcode PWA web app, check out the
+              <a href="https://pixelcodetech.com">
+                website for our services</a>.
             </p>
 
             <p id="mainInfo">
               Welcome to the
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              pwa-starter! Be sure to head back to
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
+              <a href="https://pixelcodetech.com">Pixelcode WebApp</a>
+              ! Be sure to head back to our
+              <a href="https://pixelcodetech.com/#service">Services Page</a>
             </p>
 
             ${'share' in navigator
@@ -117,24 +115,23 @@ export class AppHome extends LitElement {
           </sl-card>
 
           <sl-card id="infoCard">
-            <h2>Technology Used</h2>
+            <h2>Links to Pixelcode website</h2>
 
             <ul>
               <li>
-                <a href="https://www.typescriptlang.org/">TypeScript</a>
+                <a href="https://pixelcodetech.com/#about">About</a>
               </li>
 
               <li>
-                <a href="https://lit.dev">lit</a>
+                <a href="https://pixelcodetech.com/#service">Services</a>
               </li>
 
               <li>
-                <a href="https://shoelace.style/">Shoelace</a>
+                <a href="https://pixelcodetech.com/career.html">Careers</a>
               </li>
 
               <li>
-                <a href="https://vaadin.github.io/vaadin-router/vaadin-router/demo/#vaadin-router-getting-started-demos"
-                  >Vaadin Router</a>
+                 <a href="https://pixelcodetech.com/index.html#contact">Contact</a>
               </li>
             </ul>
           </sl-card>

@@ -4,7 +4,7 @@ import { property, customElement } from 'lit/decorators.js';
 import '@shoelace-style/shoelace/dist/components/button/button.js';
 @customElement('app-header')
 export class AppHeader extends LitElement {
-  @property({ type: String }) title = 'PWA Starter';
+  @property({ type: String }) title = 'Pixelcode PWA Demo';
 
   @property({ type: Boolean}) enableBack: boolean = false;
 
@@ -70,7 +70,8 @@ export class AppHeader extends LitElement {
           ${this.enableBack ? html`<sl-button href="${(import.meta as any).env.BASE_URL}">
             Back
           </sl-button>` : null}
-
+        </div>
+        <div
           <h1>${this.title}</h1>
         </div>
       </header>
